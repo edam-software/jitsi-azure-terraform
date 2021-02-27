@@ -75,11 +75,11 @@ Reduce maximum resolution and/or video codec bitrate and set the default codec *
 
 1.  **convert to .pfx and use Key Vault for proper certificates**
 
-2. **Deploy Azure Kubernetes for scale regional Videobridges **
+2.  **Deploy Azure Kubernetes for scale regional Videobridges**
 
-3. **Migrate configuration, SSL, token, scale set monitoring via Ansible**
+3.  **Migrate configuration, SSL, token, scale set monitoring via Ansible**
 
-4. **Telephony/SIP**
+4.  **Telephony/SIP**
 
-5. **Scaling regions or shards**
+5.  **Scaling regions or shards**
 
