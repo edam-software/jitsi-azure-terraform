@@ -1,4 +1,4 @@
-# sic-mundus-creatus
+# Terraform Jitzi on Azure
 
 Terraform configuration to deploy Jitsi-Meet Videoconferencing service on Azure.
 
