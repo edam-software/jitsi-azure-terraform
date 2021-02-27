@@ -1,4 +1,4 @@
-# Terraform Jitzi on Azure
+# Terraform Jitsi on Azure
 
 Terraform configuration to deploy Jitsi-Meet Videoconferencing service on Azure.
 
