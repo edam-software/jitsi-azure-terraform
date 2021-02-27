@@ -19,11 +19,11 @@ Features:
 
 ### Reference
 
-https://github.com/hermanbanken/jitsi-terraform-scalable
-https://github.com/mavenik/jitsi-terraform
-https://github.com/hajowieland/terraform-aws-jitsi
-https://medium.com/agranimo/deploy-jitsi-meet-server-using-azure-terraform-7e42bdbd3a9c
-[Jitsi Community)[https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-scalable]
+* https://github.com/hermanbanken/jitsi-terraform-scalable
+* https://github.com/mavenik/jitsi-terraform
+* https://github.com/hajowieland/terraform-aws-jitsi
+* https://medium.com/agranimo/deploy-jitsi-meet-server-using-azure-terraform-7e42bdbd3a9c
+* [Jitsi Community)[https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-scalable]
 
 
 ### Terraform Cloud
@@ -38,16 +38,17 @@ https://medium.com/agranimo/deploy-jitsi-meet-server-using-azure-terraform-7e42b
 
 Use the Azure portal or CLI. Separate resource group allows Terraform destroy 
 
-RG=myresourcegroup
-GALLERY=mygalleryname
-IMAGE_DEF=jitsi_meet_image
-VERSION=0.0.1
-LOCATION=eastus
-SUBSCRIPTION=
-VM_IMAGE=
-VM_ID="/subscriptions/$SUBSCRIPTION/resourceGroups/$RG/providers/Microsoft.Compute/virtualMachines/$VM_IMAGE"
 
-az sig image-version create --resource-group $RG --gallery-name $GALLERY --gallery-image-definition $IMAGE_DEF --gallery-image-version $VERSIOn --target-regions $LOCATION --managed-image $VM_ID
+    RG=myresourcegroup
+    GALLERY=mygalleryname
+    IMAGE_DEF=jitsi_meet_image
+    VERSION=0.0.1
+    LOCATION=eastus
+    SUBSCRIPTION=
+    VM_IMAGE=
+    VM_ID="/subscriptions/$SUBSCRIPTION/resourceGroups/$RG/providers/Microsoft.Compute/virtualMachines/$VM_IMAGE"
+
+     az sig image-version create --resource-group $RG --gallery-name $GALLERY --gallery-image-definition $IMAGE_DEF --    gallery-image-version $VERSIOn --target-regions $LOCATION --managed-image $VM_ID
 
 
 ### Let's Encrypt SSL Certificates
@@ -61,26 +62,24 @@ The VMSS instance with permanent public IP should be used for Let's Encrypt step
 
 Reduce maximum resolution and/or video codec bitrate and set the default codec *VP9*.
 
-video_quality = {
-  resolution = 720,
-  low_bitrate = 150000,
-  med_bitrate   = 450000
-  high_bitrate = 1450000
-  lastN        = 1,
-  layer_suspension = 1
-}
+    video_quality = {
+      resolution = 720,
+      low_bitrate = 150000,
+      med_bitrate   = 450000
+      high_bitrate = 1450000
+      lastN        = 1,
+      layer_suspension = 1
+    }
 
-### Todos
+### Todo
 
-**convert to .pfx and use Key Vault for proper certificates**
+1.  **convert to .pfx and use Key Vault for proper certificates**
 
-**Deploy Azure Kubernetes for scale regional Videobridges **
+2. **Deploy Azure Kubernetes for scale regional Videobridges **
 
-**Migrate configuration, SSL, token, scale set monitoring via Ansible**
+3. **Migrate configuration, SSL, token, scale set monitoring via Ansible**
 
-**Telephony SIP**
+4. **Telephony/SIP**
 
-**Virtual Agent Chatbot**
-
-
+5. **Scaling regions or shards**
 
