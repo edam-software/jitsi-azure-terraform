@@ -50,7 +50,7 @@ Use the Azure portal or CLI. Separate resource group allows Terraform destroy
     VM_IMAGE=
     VM_ID="/subscriptions/$SUBSCRIPTION/resourceGroups/$RG/providers/Microsoft.Compute/virtualMachines/$VM_IMAGE"
 
-     az sig image-version create --resource-group $RG --gallery-name $GALLERY --gallery-image-definition $IMAGE_DEF --    gallery-image-version $VERSIOn --target-regions $LOCATION --managed-image $VM_ID
+     az sig image-version create --resource-group $RG --gallery-name $GALLERY --gallery-image-definition $IMAGE_DEF --gallery-image-version $VERSION --target-regions $LOCATION --managed-image $VM_ID
 
 
 ### Let's Encrypt SSL Certificates
@@ -75,13 +75,13 @@ Reduce maximum resolution and/or video codec bitrate and set the default codec *
 
 ### Next steps
 
-1.  **convert to .pfx and use Key Vault**
+1.  convert to .pfx and use Key Vault
 
-2.  **Deploy Azure Kubernetes? for scalable regional Videobridges**
+2.  Deploy Azure Kubernetes? for scalable regional Videobridges
 
-3.  **Setup VM templates and scale with Ansible**
+3.  Setup VM templates and scale with Ansible
 
-4.  **Telephony/SIP**
+4.  Telephony/SIP
 
 
 ### References
