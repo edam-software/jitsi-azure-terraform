@@ -17,7 +17,7 @@ Features:
 * single shard/region. could support scaling to shards/regions with prefix/resource group
 
 
-### References
+### Reference
 
 https://github.com/hermanbanken/jitsi-terraform-scalable
 https://github.com/mavenik/jitsi-terraform
@@ -59,13 +59,28 @@ The VMSS instance with permanent public IP should be used for Let's Encrypt step
 
 ### Configure video quality and customization
 
-We can reduce maximum resolution and/or video codec bitrate and set the default codec *VP9*.
+Reduce maximum resolution and/or video codec bitrate and set the default codec *VP9*.
 
-Todo: 
+video_quality = {
+  resolution = 720,
+  low_bitrate = 150000,
+  med_bitrate   = 450000
+  high_bitrate = 1450000
+  lastN        = 1,
+  layer_suspension = 1
+}
+
+### Todos
+
 **convert to .pfx and use Key Vault for proper certificates**
+
 **Deploy Azure Kubernetes for scale regional Videobridges **
+
 **Migrate configuration, SSL, token, scale set monitoring via Ansible**
-**Telephony SIP integration**
-**Ideas?**
+
+**Telephony SIP**
+
+**Virtual Agent Chatbot**
+
 
 
