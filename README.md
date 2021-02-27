@@ -8,23 +8,24 @@ Features:
 * automatic installation
 * create SSH keypair or use existing public key
 * load balanced Azure Linux VM Scale Set (hybrid/high availability/spot instance) 
-* deploy from Azure Shared Image Gallery
 * setup video quality with new scale-set
-* Build and deploy Jitsi Meet server image (Prosody, Jicofo, Meet, Coturn) 
+* Build and deploy Jitsi-Meet from replicated Shared Image Gallery
 * Etherpad screensharing
 * Azure PostgreSQL server or Ubuntu PostgreSQL storage
-* simple Let's Encrypt Certificate management with Azure KeyVault
-* Bastion server for admin access and Ansible
-* single shard/region. could support scaling to shards/regions with prefix/resource group
+* simple Let's Encrypt Certificate managed with Azure KeyVault
+* Bastion server
+* single shard/region. could support scaling as shards/region module
 
 
-### Reference
-
-* https://github.com/hermanbanken/jitsi-terraform-scalable
-* https://github.com/mavenik/jitsi-terraform
-* https://github.com/hajowieland/terraform-aws-jitsi
-* https://medium.com/agranimo/deploy-jitsi-meet-server-using-azure-terraform-7e42bdbd3a9c
-* [Jitsi Community)[https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-scalable]
+### default Config
+    prefix = "jitsi1"
+    location = ""
+    web_host = ""
+    vmss_count = 1
+    vmss_sku = 
+    imagevm_sku = 
+    bastion_sku = 
+    jitsi_user = "jitster"
 
 
 ### Terraform Cloud
@@ -72,15 +73,21 @@ Reduce maximum resolution and/or video codec bitrate and set the default codec *
       layer_suspension = 1
     }
 
-### Next Steps
+### Next steps
 
-1.  **convert to .pfx and use Key Vault for proper certificates**
+1.  **convert to .pfx and use Key Vault**
 
-2.  **Deploy Azure Kubernetes for scale regional Videobridges**
+2.  **Deploy Azure Kubernetes? for scalable regional Videobridges**
 
-3.  **Migrate configuration, SSL, token, scale set monitoring via Ansible**
+3.  **Setup VM templates and scale with Ansible**
 
 4.  **Telephony/SIP**
 
-5.  **Scaling regions or shards**
 
+### References
+
+* https://github.com/hermanbanken/jitsi-terraform-scalable
+* https://github.com/mavenik/jitsi-terraform
+* https://github.com/hajowieland/terraform-aws-jitsi
+* https://medium.com/agranimo/deploy-jitsi-meet-server-using-azure-terraform-7e42bdbd3a9c
+* [Jitsi Community)[https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-scalable]
