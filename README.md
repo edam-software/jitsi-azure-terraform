@@ -6,7 +6,7 @@ Terraform configuration to deploy Jitsi-Meet Videoconferencing service on Azure.
 Features:
 
 * automatic installation
-* create SSH keypair or use existin public key
+* create SSH keypair or use existing public key
 * load balanced Azure Linux VM Scale Set (hybrid/high availability/spot instance) 
 * deploy from Azure Shared Image Gallery
 * setup video quality with new scale-set
