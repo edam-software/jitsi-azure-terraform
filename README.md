@@ -71,7 +71,7 @@ Reduce maximum resolution and/or video codec bitrate and set the default codec *
       layer_suspension = 1
     }
 
-### Todo
+### Next Steps
 
 1.  **convert to .pfx and use Key Vault for proper certificates**
 
