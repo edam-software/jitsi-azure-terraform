@@ -16,6 +16,7 @@ ssh_file= null
 jitsi_user="open"
 jitsi_password="sesame"
 default_language = "es"
+disk = "StandardSSD_LRS"
 
 /*
  also sets VP9 default request.
