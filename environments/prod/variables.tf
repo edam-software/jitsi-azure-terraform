@@ -57,6 +57,12 @@ variable "sku" {
   description = "OS sku"
 }
 
+variable "disk" {
+  description = "Azure disks standard_lrs StandardSSD_LRS premium_lrs"
+  default = "standard_lrs"
+}
+
+
 variable "image_version" {
   description = "OS release"
 }
