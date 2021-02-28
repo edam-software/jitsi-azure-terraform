@@ -28,7 +28,7 @@ resource azurerm_linux_virtual_machine "image_vm" {
   }
 
   os_disk {
-    storage_account_type = "Standard_LRS"
+    storage_account_type = var.disk
     caching = "ReadWrite"
   }
   identity {
