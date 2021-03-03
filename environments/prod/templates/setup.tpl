@@ -38,6 +38,9 @@ function setup_users() {
   sed -i "s/JICOFO_SECRET=.*/JICOFO_SECRET=$JICOFO_SECRET/" $JICOFO_CONFIG
   sed -i "s/JVB_SECRET=.*/JVB_SECRET=$JVB_AUTH_PASSWORD/" $JVB_CONF
   sed -i "s/org.jitsi.videobridge.xmpp.user.shard.PASSWORD=.*/org.jitsi.videobridge.xmpp.user.shard.PASSWORD=$JVB_AUTH_PASSWORD/" $JVB_SIP
+  sleep 30
+  # psql: error: FATAL:  the database system is starting up
+  sudo -u postgres psql ${db_name} -c "delete from prosody;"
   # default admin
   prosodyctl register $JITSI_USER "${hostname}" $JITSI_PASSWORD
   prosodyctl register "jvb" "auth.${hostname}" $JVB_AUTH_PASSWORD
